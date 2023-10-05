@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './colorpicker.css';
+import './ColorPicker.css';
 
 const ColorPicker = ({ colors }) => {
   const [selectedColor, setSelectedColor] = useState(null);
@@ -16,8 +16,13 @@ const ColorPicker = ({ colors }) => {
 
   return (
     <div className="color-picker-container">
-      <div className="inner-box">
-        <h2>Color Picker</h2>
+      <div
+        className="inner-box"
+        style={{
+          backgroundColor: selectedColor || 'lightpink', // Set background color to selectedColor or lightpink
+        }}
+      >
+        <h2 className="heading">Color Picker</h2>
         <button className="pick-color-button" onClick={handleButtonClick}>
           Pick a color
         </button>
